@@ -8,7 +8,6 @@ Aplikasi toko mini sederhana menggunakan Flutter.
 - **Daftar Produk**: Tampilan grid untuk setiap kategori
 - **Detail Produk**: Informasi lengkap untuk setiap produk
 - **Navigasi Smooth**: Perpindahan halaman yang lancar
-- **UI Modern**: Desain bersih dengan color scheme yang konsisten
 
 ## 🛠️ Widget yang Digunakan
 
