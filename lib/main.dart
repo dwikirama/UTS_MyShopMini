@@ -1,37 +1,28 @@
+// File: lib/main.dart
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
-import 'app_colors.dart';
+import 'package:myshop_mini/screens/beranda.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyShopMiniApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyShopMiniApp extends StatelessWidget {
+  const MyShopMiniApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MyShop Mini',
-      theme: ThemeData(
-        primaryColor: AppColors.primary,
-        colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.blue,
-          accentColor: AppColors.accent,
-        ),
-        scaffoldBackgroundColor: AppColors.background,
-        textTheme: TextTheme(
-          bodyLarge: TextStyle(color: AppColors.text),
-          bodyMedium: TextStyle(color: AppColors.text),
-        ),
-        cardTheme: CardThemeData(
-          color: Colors.white,
-          elevation: 4,
-          shadowColor: AppColors.primary.withOpacity(0.2),
-        ),
-        iconTheme: IconThemeData(color: AppColors.primary),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF00BCD4),
+          brightness: Brightness.light,
+        ),
+        useMaterial3: true,
+        fontFamily: 'Roboto',
+      ),
+      home: const HomeScreen(),
     );
   }
 }
